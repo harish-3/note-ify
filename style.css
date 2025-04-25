@@ -1,0 +1,237 @@
+/* Custom styling for Note-ify application */
+
+/* Main app styling */
+.main-header {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.main-header h3 {
+    margin-top: 0.5rem;
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+/* Enhanced chat styling */
+.chat-container {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.chat-message-user {
+    background-color: #e1f5fe;
+    border-radius: 18px 18px 0 18px;
+    padding: 10px 15px;
+    margin: 5px 0;
+    max-width: 80%;
+    align-self: flex-end;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: #333333;
+    font-weight: 500;
+}
+
+.chat-message-assistant {
+    background-color: #f0f4f8;
+    border-radius: 18px 18px 18px 0;
+    padding: 10px 15px;
+    margin: 5px 0;
+    max-width: 80%;
+    align-self: flex-start;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: #333333;
+    font-weight: 500;
+}
+
+/* Flashcard customization */
+.flashcard-container {
+    margin-top: 1.5rem;
+}
+
+/* Download section styling */
+.download-section {
+    background-color: rgba(30, 30, 40, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.download-section h3 {
+    color: #333;
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.flashcard-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.flashcard-theme-selector {
+    min-width: 200px;
+}
+
+/* Download button styling */
+.download-button {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 1rem 1.8rem;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 6px 12px rgba(76, 29, 149, 0.3);
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+}
+
+.download-button:hover {
+    background: linear-gradient(135deg, #7918d9 0%, #2980fe 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(76, 29, 149, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.download-button:before {
+o    content: "📥";
+    margin-right: 10px;
+    font-size: 1.3rem;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Ensure no white background on any Streamlit elements */
+.stApp, .stApp > header, .stApp > div, .stApp > div > div {
+    background-color: transparent !important;
+}
+
+/* Fix any remaining white boxes */
+.element-container, .element-container > div, .element-container > div > div,
+.stMarkdown, .stMarkdown > div, .stMarkdown > div > div,
+.stFileUploader, .stFileUploader > div, .stFileUploader > div > div,
+.stSelectbox, .stSelectbox > div, .stSelectbox > div > div,
+.stButton, .stButton > div, .stButton > div > div,
+.stExpander, .stExpander > div, .stExpander > div > div,
+.stTextInput, .stTextInput > div, .stTextInput > div > div {
+    background-color: transparent !important;
+}
+
+/* Ensure input fields have proper styling */
+input, textarea, select {
+    background-color: rgba(30, 30, 40, 0.7) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 12px 18px !important;
+    border-radius: 10px !important;
+    font-size: 1.05rem !important;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2) !important;
+    outline: none;
+}
+
+/* Fix any white backgrounds in the chat container */
+.chat-container, .chat-container > div, .chat-container > div > div {
+    background-color: transparent !important;
+}
+
+/* Context highlighting */
+.highlight {
+    background-color: #fff9c4;
+    padding: 2px 0;
+    border-radius: 3px;
+    color: #333333;
+    font-weight: 500;
+}
+
+/* Chat input styling */
+.stChatInput > div {
+    background-color: rgba(30, 30, 40, 0.9) !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+.stChatInput input, .stChatInput textarea {
+    background-color: rgba(30, 30, 40, 0.9) !important;
+    color: white !important;
+    border-radius: 10px !important;
+    padding: 12px 18px !important;
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+    font-size: 1.05rem !important;
+}
+
+.stChatInput > div > div {
+    background-color: transparent !important;
+}
+
+/* Fix for any white box issues */
+.stTextInput > div {
+    background-color: transparent !important;
+}
+
+.stTextInput > div > div {
+    background-color: transparent !important;
+}
+
+.stTextInput input {
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background-color: rgba(30, 30, 40, 0.7) !important;
+    color: white !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 1rem;
+    }
+    
+    .main-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .download-button {
+        display: block;
+        width: 100%;
+        margin: 1rem 0;
+        padding: 1.2rem 1rem;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    
+    /* Ensure no white boxes appear on mobile */
+    .stTextInput, .stTextInput > div, .stTextInput > div > div {
+        background-color: transparent !important;
+    }
+}
