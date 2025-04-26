@@ -1,5 +1,8 @@
 import google.generativeai as genai
 import os
+import time
+from google.api_core import exceptions
+
 
 genai.configure(api_key="AIzaSyCT56Gh8mbyhe6jdDsaz5bd0ja7BZ4RxMg")  # Replace with your key
 
