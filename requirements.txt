@@ -2,7 +2,3 @@ streamlit
 PyPDF2
 python-docx
 google-generativeai
-pandas
-numpy
-requests
-base58
